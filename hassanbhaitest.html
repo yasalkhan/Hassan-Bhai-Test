@@ -12,11 +12,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <style>
   
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="gsap.js"></script>
+
+  <style>
+  
+
+
+
 body{
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
   }
     
 #hiimg {
@@ -25,10 +39,13 @@ body{
     background-position:bottom ;
     background-repeat: no-repeat;
     /* padding-bottom: 370px!important; */
-    height: 675px!important;
-    width: 100%!important;
-    margin-top: -67px!important;
+    height: 765px!important;
+    width: 105%!important;
+    margin-top: -141px!important;
     position: static;
+    overflow: hidden;
+    overflow-x: hidden;
+
   }
 
   .h1 {
@@ -44,7 +61,7 @@ body{
 .gogo {
     position: relative;
    top: 150px;
-    /* left: 10px; */
+    left: 116px;
     color: white;
     margin-left: 40px;
 }
@@ -52,6 +69,7 @@ body{
 
 #navcontroller {
     position: relative;
+    top: -23px;
     
 }
 
@@ -76,8 +94,8 @@ button {
     box-shadow:none !important;
 }
 
-h5 {
-    color:#0d6efd;
+.h2 {
+    color:white;
 }
 
 #orcitybjakybol {
@@ -90,9 +108,9 @@ h5 {
 }
 
 .postion-stactic{
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; */
 }
 
 #searchsideicon {
@@ -188,13 +206,12 @@ cursor: pointer;
 
 .btnofjoin {
     position: relative;
-    left: 34px;
+    left: 157px;
     top: 162px;
     border: none;
     border-radius: 50px;
-    background-image: linear-gradient(to right, rgb(175, 1, 255) , rgb(255, 0, 255));
+    color: black;
      box-shadow: 0px 5px 14px 0px black; 
-    color: white;
     display: inline-block;
   padding: 15px 25px;
   font-size: 18px;
@@ -207,6 +224,8 @@ cursor: pointer;
 .btnofjoin:hover {
   transform: translateY(-2px);
   box-shadow: 0px 5px 14px 0px rgb(204, 2, 255);
+  background-image: linear-gradient(to right, rgb(175, 1, 255) , rgb(255, 0, 255));
+  color: white;
 }
 @media (max-width: 670px)
 {.play-button-container 
@@ -259,7 +278,7 @@ cursor: pointer;
     justify-content: center;
     transition: all .3s cubic-bezier(.4,0,.2,1);
     width: 164px;
-    left: 700px;
+    left: 975px;
     top: -75px;
     position: relative;
 }
@@ -284,17 +303,20 @@ cursor: pointer;
     align-content: center;
 }
 .h1of2 {
-font-size: 75px !important;
-  font-family: 'Istok Web' !important;
-  color: #ae2acf !important;
-  top: 88px;
-  position: relative;
+  font-size: 54px !important;
+    font-family: 'Istok Web' !important;
+    color: #ae2acf !important;
+    top: 88px;
+    position: relative;
+    left: 500px;
+
 }
 
 .ptagofheadsec {
   margin: 20px;
-  text-align: center;
   color: gray;
+  position: relative;
+  left: 515px;
 }
 
 .readbtn {
@@ -455,6 +477,8 @@ img {
 }
 .thebodyh2 {
   color: black;
+    left: 500px;
+    position: relative;
 }
 
 @media (min-width: 768px){
@@ -473,13 +497,17 @@ img {
   background-color: #423b3b73;
 }
 
+.navbtns:hover {
+  background-image: linear-gradient(to right, rgb(175, 1, 255) , rgb(255, 0, 255));
+  color: white;
+}
 
 .navbtns {
   border: none;
     border-radius: 50px;
-    background-image: linear-gradient(to right, rgb(175, 1, 255) , rgb(255, 0, 255));
-    display: flex !important;
-    color: white !important;
+    /* background-image: linear-gradient(to right, rgb(175, 1, 255) , rgb(255, 0, 255));
+    display: flex !important; */
+    color: black ;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
@@ -558,7 +586,12 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-
+#btncontroll {
+    width: 45%;
+    right: -340px;
+    position: absolute;
+    top: 38px;
+}
 
 /* 
 // X-Small devi
@@ -580,57 +613,56 @@ es (portrait phones, less than 576px)
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) { ... } */
 
+
+
+
+.logovexzion {
+  left: 420px;
+    top: -235px;
+    position: relative;
+    width: 357px;
+    filter: drop-shadow(0px 5px 10px black);
+
+}
+
+
     </style>
 
 </head>
 <body>
-  
+  <div id="main">
   <div class="postion-stactic">
     <div id="navcontroller">    <!-- NAVBAR -->
-      <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
        
-       
-        <a class="hilink" href="#hiimg"><button  class="navbtns"><svg  class="svguprwala" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-          <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
-        </svg >  Home</button></a>
-      
-      
-        <a class="hilink" href="#afternav"><button class="navbtns"><svg  class="svguprwala" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
-          <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
-        </svg>About us</button></a>
-      
-      
-        <a class="hilink" href="#servicesop"><button class="navbtns"><svg class="svguprwala" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-gear" viewBox="0 0 16 16">
-          <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
-        </svg>Services</button></a>
-      
-      
-      
-      
-      
-      
+     
         
-      </div>
-    </div>
+      
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
 
-          <H5 >GODZILLA</H5 color="#0d6efd">
-  
-
-              <div id="orcitybjakybol">
-                  <input top="0px", left= '0px'  name="searchbar" id="searchbar" type="search" placeholder="  Search Here" />
-                  <div htmlFor="searchbar" id="searchsideicon">
-                    <svg id="search-icon"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg>
+        <img src="Untitled design (3).png" alt=""  width="125px" height="125px" >
+  <div id="btncontroll">
+            <a class="hilink" href="#hiimg"><button  class="navbtns"><svg  class="svguprwala" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+              <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+            </svg >  Home</button></a>
+          
+          
+            <a class="hilink" href="#afternav"><button class="navbtns"><svg  class="svguprwala" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+              <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+            </svg>About us</button></a>
+          
+          
+            <a class="hilink" href="#servicesop"><button class="navbtns"><svg class="svguprwala" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-gear" viewBox="0 0 16 16">
+              <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+            </svg>Services</button></a>
+          
+          
+          
+          </div>   
+          
+          
 </div>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" color="#0d6efd"></span>
-        </button>
-      </div>
+      
     </nav>
   </div>  
 </div>
@@ -643,7 +675,7 @@ es (portrait phones, less than 576px)
         
         <div  class="gogo">
       
-      <h1 class="h1">Consultants</h1>
+      <h1 class="h1">Vixzion Marketeer</h1>
       <p class="ptag"><b>EXCELLENT</b> <svg  class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
         <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
       </svg>
@@ -674,20 +706,12 @@ es (portrait phones, less than 576px)
     <br>
    <a href=""> 
        <button class="btnofjoin">
-          <b> Join Today</b>
+          <b>Contact Us</b>
        </button>
    </a>    
    
-   
-   
-   <div class="play-button-container">
-    <div class="play-button">
-    <svg>
-    <title>Play Button</title>
-    <polygon points="10 33 10 1 34 17"></polygon>
-    </svg>
-    </div>
-    </div>
+   <img class="logovexzion" src="Untitled design (3).png" alt="" >
+ 
     </section>
     
     
@@ -696,7 +720,7 @@ es (portrait phones, less than 576px)
         
         <h1 class="h1of2" >Welcome To SIS LTD</h1><br><br><br><br>
         <h3 class="thebodyh2">Synergy Immigration Solutions Limited</h3>
-      <p class="ptagofheadsec">Synergy Immigration Solutions Ltd is an OISC registered company offering a wide range of UK immigration visa services for both corporate and individual clients needing assistance with their visa issues and concerns. We assist small to medium sized businesses in obtaining sponsorship lbicences to enable them to recruit overseas talent, and we are experts in processing Skilled Worker and ICT visas. We work with clients from a wide range of sectors including IT, Education, Retail, Beauty, Mental Health, Construction, Manufacturing and Film Production.</p>
+      <p class="ptagofheadsec">Synergy Immigration Solutions Ltd is an OISC registered company offering a <br> wide range of UK immigration visa services for both corporate and individual <br>clients needing assistance with their visa issues and concerns. We assist small <br>to medium sized businesses in obtaining sponsorship lbicences to enable them <br> to recruit overseas talent, and we are experts in processing Skilled Worker and <br> ICT visas. We work with clients from a wide range of sectors including IT, <br>Education, Retail, Beauty, Mental Health, Construction, Manufacturing and Film <br> Production.</p>
     
 <a href="">     
    <button class="readbtn"> <b> Read More > </b></button>
@@ -1070,5 +1094,6 @@ es (portrait phones, less than 576px)
 <!-- End of .container -->
 
     </footer>
+  </div>
 </body>
 </html>
